@@ -1,0 +1,103 @@
+html,
+body {
+    margin: 0 auto;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+}
+
+p,h1,h2,h3,h4 {
+    margin: 0;
+    margin-bottom: 0.2rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+p {
+    font-weight: 300;
+    opacity: 0.7;
+}
+.app {
+    width: 800px;
+    height: 800px;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:    repeat(6, 1fr);
+    grid-template-areas: 
+    ". balance balance balance ."
+    "tester credit credit credit ."
+    "tester credit credit credit ."
+    ". outstanding outstanding outstanding designer"
+    ". footer footer footer designer";
+}
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px 5px rgb(0 0 0 / 23%);
+    padding: 0 2rem;
+}
+.card.balance {
+    display: flex;
+    grid-area: balance;
+    justify-content: space-between;
+    align-items: center;
+}
+.card.balance .icon-col {
+    min-width: 3rem;
+}
+.card.balance .data-col {
+    flex-grow: 1
+}
+.card.tester {
+    grid-area: tester;
+}
+.card.credit {
+    grid-area: credit;
+}
+.card.outstanding {
+    grid-area: outstanding;
+}
+.card.designer {
+    grid-area: designer;
+}
+.card.footer {
+    grid-area: footer;
+}
+
+.button {
+    background: black;
+    color: white;
+    appearance: none;
+    border-radius: 1rem;
+    border-width: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.button.button-square {
+    border-radius: 0.25rem;
+}
+
+.icon {
+    height: 1.5rem;
+}
+
+.icon.icon-border {
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    padding: 0.3rem;
+}
